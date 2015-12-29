@@ -3,25 +3,33 @@
 <head>
     <title>Angular 2 Quickstart</title>
     <!-- 1. Load libraries -->
-    
+
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
 
+    <!-- this is for just pure JS -->
+    <script src="node_modules/rxjs/bundles/Rx.umd.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-all.umd.js"></script>
+
     <!-- 2. Configure SystemJS -->
     <script>
-        System.config({
-            packages: {        
-                app: {
-                    format: 'register',
-                    defaultExtension: 'js'
-                }
-            }
-        });
-        System.import('app/boot')
-            .then(null, console.error.bind(console));
+        // System.config({
+        //     packages: {        
+        //         app: {
+        //             format: 'register',
+        //             defaultExtension: 'js'
+        //         }
+        //     }
+        // });
+        // System.import('app/boot')
+        //     .then(null, console.error.bind(console));
     </script>
+
+    <!-- 2. Load our 'modules' in pure JS -->
+    <script src='app/app.componentJS.js'></script>
+    <script src='app/bootJS.js'></script>
 </head>
 <!-- 3. Display the app -->
 <body>
